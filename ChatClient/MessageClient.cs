@@ -17,7 +17,7 @@ namespace ChatClient
         {
             _id = id;
             _hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("http://localhost:5131/hub/messages"))
+                .WithUrl(new Uri("http://localhost:5223/hub/messages"))
                 .WithAutomaticReconnect()
                 .Build();
             _hubConnection.StartAsync().Wait();

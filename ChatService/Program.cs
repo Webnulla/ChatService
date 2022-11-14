@@ -1,5 +1,6 @@
 using ChatService.Hubs;
 using ChatService.Services.Interfaces;
+using ChatService.Services.Repositories;
 
 namespace ChatService
 {
@@ -11,7 +12,7 @@ namespace ChatService
 
             builder.Services.AddSignalR();
 
-            builder.Services.AddSingleton<IMessageService, IMessageService>();
+            builder.Services.AddSingleton<IMessageService, MessageService>();
 
             builder.Services.AddControllers();
 

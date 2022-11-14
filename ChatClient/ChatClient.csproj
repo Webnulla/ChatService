@@ -13,7 +13,7 @@
 
    <ItemGroup>
 	 <OpenApiReference Include="OpenAPIs\swagger.json" CodeGenerator="NSwagCSharp" Namespace="MessageServiceReference" ClassName="MessageServiceClient">
-	 <SourceUri>http://localhost:5131/swagger/v1/swagger.json</SourceUri>
+	 <SourceUri>http://localhost:5223/swagger/v1/swagger.json</SourceUri>
 	 </OpenApiReference>
    </ItemGroup>
 

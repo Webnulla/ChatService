@@ -7,7 +7,7 @@ namespace ChatClient
         static void Main(string[] args)
         {
             MessageServiceClient messageServiceClient =
-                new MessageServiceClient("http://localhost:5131", new HttpClient());
+                new MessageServiceClient("http://localhost:5223", new HttpClient());
             var clientId = messageServiceClient.ConnectAsync("Test").Result;
 
             MessageClient message = new MessageClient(clientId);

@@ -1,3 +1,7 @@
+using ChatService.Hubs;
+using ChatService.Services.Interfaces;
+using ChatService.Services.Repositories;
+
 namespace ChatService
 {
     public class Program
@@ -6,6 +10,9 @@ namespace ChatService
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddSignalR();
+
+            builder.Services.AddSingleton<IMessageService, MessageService>();
 
             builder.Services.AddControllers();
 
@@ -27,6 +34,8 @@ namespace ChatService
 
 
             app.MapControllers();
+
+            app.MapHub<MessageHub>("/hub/messages");
 
             app.Run();
         }
